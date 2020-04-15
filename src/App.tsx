@@ -40,22 +40,22 @@ function App() {
   return (
     <div className="App">
       <p>
-        <a href="/" onClick={function(e){
+      <button title="connect" onClick={function(e){
           var provider = (window as any).ethereum;
           provider.enable();
-        }}>click to connect</a>
+        }}>click to connect</button>
       </p>
       <p>
 
-        <a href="/" onClick={function(e){
+      <button title="checkAddr" onClick={function(e){
           console.log(web3.eth.defaultAccount);
           alert(web3.eth.defaultAccount);
           //e.preventDefault();
-        }}>click to see address</a>
+        }}>click to see address</button>
       </p>
 
       <p>
-        <a href="/" onClick={function(e){
+        <button title="sendTx" onClick={function(e){
           var gasLimit = '15';
           var account = web3.eth.defaultAccount;
           console.log(web3.eth.defaultAccount);
@@ -76,7 +76,7 @@ function App() {
             console.log('no account');
           }
           e.preventDefault();
-        }}>send Transaction</a>
+        }}>send Transaction</button>
       </p>
     </div>
   );
