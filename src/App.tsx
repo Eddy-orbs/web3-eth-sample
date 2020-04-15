@@ -64,7 +64,7 @@ function App() {
           if (account) {
             web3.eth.sendTransaction({
               from: account,
-              to: '0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe',
+              to: '0x170FDc6C3d4bc047e6Eab8e076FE9921557e551F',
               value: '1000000000000000',
               gas: gasLimit // use web3.eth.estimateGas() to get this amount, and add a little for extra safety.
             }).then(receipt => {
