@@ -6,9 +6,11 @@ function App() {
   var web3 = new Web3(provider);
 
   if (provider.isStatus) {
-    console.log("kimed");
+    console.log("provider Status wallet");
   } else if (provider.isMetaMask) {
     console.log("provider Metamask");
+  } else if (provider.isTrust) {
+    console.log("provider Trust wallet");
   } else {
     console.log("no provider");
   }
