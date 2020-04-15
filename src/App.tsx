@@ -40,18 +40,19 @@ function App() {
   return (
     <div className="App">
       <p>
-      <button title="connect" onClick={function(e){
+        <a href="." onClick={function(e){
           var provider = (window as any).ethereum;
           provider.enable();
-        }}>click to connect</button>
+          e.preventDefault();
+        }}>click to connect</a>
       </p>
       <p>
 
-      <button title="checkAddr" onClick={function(e){
+      <a href="." onClick={function(e){
           console.log(web3.eth.defaultAccount);
           alert(web3.eth.defaultAccount);
           //e.preventDefault();
-        }}>click to see address</button>
+        }}>click to see address</a>
       </p>
 
       <p>
